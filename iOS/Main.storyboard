@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="803.74810000000002"/>
         </scene>
-        <!--Web View Controller-->
+        <!--My Web View Controller-->
         <scene sceneID="jBD-l0-X08">
             <objects>
-                <viewController id="269-pw-Gev" customClass="WebViewController" sceneMemberID="viewController">
+                <viewController id="269-pw-Gev" customClass="MyWebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zV9-4e-P4w"/>
                         <viewControllerLayoutGuide type="bottom" id="KKe-8O-qdV"/>
