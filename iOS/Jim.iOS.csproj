@@ -107,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="WebFlow\" />
+    <Folder Include="LoginFlow\" />
+    <Folder Include="MapFlow\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
@@ -123,6 +126,22 @@
     <Compile Include="ViewController.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebFlow\MyWebViewController.cs" />
+    <Compile Include="WebFlow\MyWebViewController.designer.cs">
+      <DependentUpon>MyWebViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapFlow\MyMapViewController.cs" />
+    <Compile Include="MapFlow\MyMapViewController.designer.cs">
+      <DependentUpon>MyMapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFlow\LoginViewController.cs" />
+    <Compile Include="LoginFlow\LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebViewController.cs" />
+    <Compile Include="WebViewController.designer.cs">
+      <DependentUpon>WebViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

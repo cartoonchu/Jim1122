@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/loginflow_loginview_txtaccount"
+
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:hint="Account"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <EditText
+        android:id="@+id/loginflow_loginview_txtpassword"
+
+        android:layout_below="@id/loginflow_loginview_txtaccount"
+        android:layout_marginTop="20dp"
+        android:hint="Password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/loginflow_loginview_btnlogin"
+        android:layout_below="@id/loginflow_loginview_txtpassword"
+        android:layout_marginTop="40dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+
+        android:text="CONFIRM"
+        />
+
+</RelativeLayout>
