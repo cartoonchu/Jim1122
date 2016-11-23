@@ -9,12 +9,18 @@ using System.CodeDom.Compiler;
 
 namespace Jim.iOS
 {
-	[Register ("WebViewController")]
-	partial class WebViewController
+	[Register ("MenuViewController")]
+	partial class MenuViewController
 	{
+		[Outlet]
+		UIKit.UITableView userTable { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (userTable != null) {
+				userTable.Dispose ();
+				userTable = null;
+			}
 		}
 	}
 }
