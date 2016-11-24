@@ -28,6 +28,14 @@ namespace Jim.Droid
 			User user = Newtonsoft.Json.JsonConvert.DeserializeObject<User>(userString);
 
 			lbName.Text = user.Name;
+
+			var btnGoWebView = FindViewById<Button>(Resource.Id.detailview_btnGoWebView);
+			btnGoWebView.Click += (sender, e) =>
+			{
+				Intent nextActivity = new Intent(this, typeof(MyWebActivity));
+
+				StartActivity(nextActivity);
+			};
 		}
 	}
 }

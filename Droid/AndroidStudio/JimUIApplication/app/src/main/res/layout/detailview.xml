@@ -9,4 +9,13 @@
         android:id="@+id/detailview_lbName"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="GoWebView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailview_lbName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="155dp"
+        android:id="@+id/detailview_btnGoWebView" />
 </RelativeLayout>
