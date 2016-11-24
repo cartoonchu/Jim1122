@@ -1,12 +1,13 @@
 ﻿using System;
-using
 using UIKit;
 using System.Collections.Generic;
+using Debug = System.Diagnostics.Debug;
 
 namespace Jim.iOS
 {
 	public partial class MenuViewController : UIViewController
 	{
+		public User SelectedUser { set; get;}
 		public MenuViewController(IntPtr handle) : base(handle)
 		{
 		}
@@ -15,6 +16,53 @@ namespace Jim.iOS
 		{
 			base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
+
+			ShowTable();
+		}
+
+		private void ShowTable()
+		{
+
+			var list = new List<User>
+			{
+				new User {Name = @"Aa", Description = @"使用者 甲"},
+				new User {Name = @"Bb", Description = @"使用者 乙"},
+				new User {Name = @"Cc", Description = @"使用者 丙"},
+				new User {Name = @"Dd", Description = @"使用者 丁"}
+			};
+
+			var tableSource = new UserTableSource(list);
+			userTable.Source = tableSource;
+
+			tableSource.UserSelected += delegate (object sender, UserSelectedEventArgs e)
+			{
+				SelectedUser = e.SelectedUser;
+				Debug.WriteLine(e.SelectedUser.Name);
+
+				InvokeOnMainThread(() =>
+				{
+					PerformSegue("moveToDetailSegue", this);
+				});
+			};
+
+			// 考試時InvokeOnMainThread 呼叫
+			userTable.ReloadData();
+
+		}
+
+		public override void PrepareForSegue(UIStoryboardSegue segue, Foundation.NSObject sender)
+		{
+			base.PrepareForSegue(segue, sender);
+
+			if("moveToDetailSegue" == segue.Identifier)
+			{
+				if(segue.DestinationViewController is DetailViewController)
+				{
+					var destViewController = segue.DestinationViewController as DetailViewController;
+
+					destViewController.SelectedUser = SelectedUser;
+				}
+			}
 		}
 
 		public override void DidReceiveMemoryWarning()
@@ -43,7 +91,7 @@ namespace Jim.iOS
 			// Memory
 			public override nint RowsInSection(UITableView tableview, nint section)
 			{
-				return (nint)Users.Count;
+				return Users.Count;
 			}
 
 			// Controller -> View
@@ -84,6 +132,7 @@ namespace Jim.iOS
 			public event EventHandler<UserSelectedEventArgs> UserSelected;
 
 		}
+
 		public class UserSelectedEventArgs : EventArgs
 		{
 

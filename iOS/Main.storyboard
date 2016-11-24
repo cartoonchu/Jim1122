@@ -151,7 +151,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="eZy-aS-RdR" firstAttribute="leading" secondItem="VF6-7q-xdy" secondAttribute="leadingMargin" id="386-rC-3Ib"/>
                                                 <constraint firstItem="aYK-rO-YZi" firstAttribute="top" secondItem="VF6-7q-xdy" secondAttribute="topMargin" id="9Xq-Vp-mx5"/>
@@ -161,7 +161,7 @@
                                                 <constraint firstItem="eZy-aS-RdR" firstAttribute="top" secondItem="aYK-rO-YZi" secondAttribute="bottom" constant="2" id="zEi-ng-sLJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="lbDescription" destination="eZy-aS-RdR" id="9ib-xD-DsS"/>
                                             <outlet property="lbName" destination="aYK-rO-YZi" id="oIC-UA-Y7v"/>
@@ -182,7 +182,7 @@
                     <navigationItem key="navigationItem" id="MZd-6A-kPx"/>
                     <connections>
                         <outlet property="userTable" destination="BCR-Kz-gPU" id="6U7-EA-r4n"/>
-                        <segue destination="oXN-qm-zPi" kind="showDetail" identifier="moveToDetailSegue" id="1PV-Ib-wxS"/>
+                        <segue destination="oXN-qm-zPi" kind="presentation" identifier="moveToDetailSegue" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="1PV-Ib-wxS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fjp-BV-3bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -200,7 +200,7 @@
                     <view key="view" contentMode="scaleToFill" id="e9u-6h-aMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <segue destination="269-pw-Gev" kind="show" identifier="moveToWebViewSegue" id="zWt-jv-2Tv"/>

@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace Jim.Droid
 {
@@ -23,7 +24,11 @@ namespace Jim.Droid
 			var txtPassword = FindViewById<EditText>(Resource.Id.loginflow_loginview_txtpassword);
 
 			var btnLogin = FindViewById<Button>(Resource.Id.loginflow_loginview_btnlogin);
-			btnLogin.Click += (sender, e) => { };
+			btnLogin.Click += (sender, e) => {
+				Intent nextActivity = new Intent(this,typeof(MenuActivity));
+
+				StartActivity(nextActivity);
+			};
 
 		}
 	}

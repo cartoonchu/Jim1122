@@ -73,6 +73,7 @@ namespace Jim.iOS
 			}
 			public event EventHandler<HtmlReceivedEventArgs> HtmlStringReceived;
 		}
+
 		public class HtmlReceivedEventArgs : EventArgs
 		{
 			public string Html { get; set; }

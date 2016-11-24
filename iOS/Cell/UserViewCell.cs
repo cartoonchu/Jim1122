@@ -13,7 +13,8 @@ namespace Jim.iOS
 		}
 
 		public void UpdateUI(User user){
-
+			lbName.Text = user.Name;
+			lbDescription.Text = user.Description;
 			
 		}
 	}
