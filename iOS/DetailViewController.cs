@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Threading.Tasks;
 using UIKit;
 
 namespace Jim.iOS
@@ -16,6 +16,14 @@ namespace Jim.iOS
 			base.ViewDidLoad();
 			// Perform any additional setup after loading the view, typically from a nib.
 			Title = SelectedUser.Name;
+
+			btnGoWebView.TouchUpInside += (object sender, EventArgs e) =>
+			{
+				PerformSegue("moveToWebViewSegue", this);
+
+			};
+
+
 		}
 		 
 		public override void DidReceiveMemoryWarning()

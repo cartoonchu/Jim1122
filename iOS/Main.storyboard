@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="2325.5999999999999" y="-8.5457271364317844"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="44l-Z4-6Y1">
             <objects>
-                <viewController id="oXN-qm-zPi" sceneMemberID="viewController">
+                <viewController id="oXN-qm-zPi" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IDh-0D-dUT"/>
                         <viewControllerLayoutGuide type="bottom" id="2vp-4L-UwG"/>
@@ -200,9 +200,17 @@
                     <view key="view" contentMode="scaleToFill" id="e9u-6h-aMY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evN-pK-ZcU">
+                                <rect key="frame" x="240" y="629" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="GoToWebView"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="btnGoWebView" destination="evN-pK-ZcU" id="CVT-oM-cSu"/>
                         <segue destination="269-pw-Gev" kind="show" identifier="moveToWebViewSegue" id="zWt-jv-2Tv"/>
                         <segue destination="bI4-03-BFq" kind="show" identifier="moveToMapViewSegue" id="U52-md-N18"/>
                     </connections>
