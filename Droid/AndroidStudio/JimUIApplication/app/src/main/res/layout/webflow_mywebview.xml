@@ -19,7 +19,7 @@
         android:layout_height="30dp"
 
         android:layout_toLeftOf="@id/webflow_mywebview_btnGO"
-
+        android:id="@+id/webflow_mywebview_txtUrl"
         android:layout_alignParentBottom="true"
         />
 

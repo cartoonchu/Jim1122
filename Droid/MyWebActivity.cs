@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Content;
 using Android.Runtime;
 using Android.Views.InputMethods;
+
 using AndroidHUD;
 using Java.Interop;
 using Debug = System.Diagnostics.Debug;
@@ -24,6 +25,7 @@ namespace Jim.Droid
 		private WebView MyWebView { get; set; }
 		private InputMethodManager _InputMethodManager;
 		private Button BtnGo { get; set; }
+		private EditText TxtUrl { get; set; }
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -110,8 +112,8 @@ namespace Jim.Droid
 				(InputMethodManager)GetSystemService(Context.InputMethodService);
 
 
-			/*
-			TxtUrl = FindViewById<EditText> (Resource.Id.txtUrl);
+
+			TxtUrl = FindViewById<EditText> (Resource.Id.webflow_mywebview_txtUrl);
 
 			TxtUrl.TextChanged += (object sender,
 				Android.Text.TextChangedEventArgs e) => {
@@ -119,8 +121,6 @@ namespace Jim.Droid
 				Debug.WriteLine( TxtUrl.Text +":"+ e.Text );
 
 			};
-
-			*/
 
 			#endregion
 

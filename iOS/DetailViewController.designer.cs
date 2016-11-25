@@ -13,10 +13,42 @@ namespace Jim.iOS
 	partial class DetailViewController
 	{
 		[Outlet]
+		UIKit.UIButton btnGoMapView { get; set; }
+
+		[Outlet]
 		UIKit.UIButton btnGoWebView { get; set; }
+
+		[Outlet]
+		UIKit.UIImageView imgPicture { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbDescription { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbPhone { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (lbPhone != null) {
+				lbPhone.Dispose ();
+				lbPhone = null;
+			}
+
+			if (lbDescription != null) {
+				lbDescription.Dispose ();
+				lbDescription = null;
+			}
+
+			if (imgPicture != null) {
+				imgPicture.Dispose ();
+				imgPicture = null;
+			}
+
+			if (btnGoMapView != null) {
+				btnGoMapView.Dispose ();
+				btnGoMapView = null;
+			}
+
 			if (btnGoWebView != null) {
 				btnGoWebView.Dispose ();
 				btnGoWebView = null;

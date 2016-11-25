@@ -13,21 +13,45 @@ namespace Jim.iOS
 	partial class UserViewCell
 	{
 		[Outlet]
-		UIKit.UILabel lbDescription { get; set; }
+		UIKit.UIImageView imgPicture { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbAddress { get; set; }
 
 		[Outlet]
 		UIKit.UILabel lbName { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbOpeningTime { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lbPhone { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (imgPicture != null) {
+				imgPicture.Dispose ();
+				imgPicture = null;
+			}
+
+			if (lbAddress != null) {
+				lbAddress.Dispose ();
+				lbAddress = null;
+			}
+
 			if (lbName != null) {
 				lbName.Dispose ();
 				lbName = null;
 			}
 
-			if (lbDescription != null) {
-				lbDescription.Dispose ();
-				lbDescription = null;
+			if (lbOpeningTime != null) {
+				lbOpeningTime.Dispose ();
+				lbOpeningTime = null;
+			}
+
+			if (lbPhone != null) {
+				lbPhone.Dispose ();
+				lbPhone = null;
 			}
 		}
 	}

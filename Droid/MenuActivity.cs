@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,12 +32,12 @@ namespace Jim.Droid
 		private void LoadData()
 		{
 
-			var list = new List<User>
+			var list = new List<Restaurant>
 			{
-				new User {Name = @"Aa", Description = @"使用者 甲"},
-				new User {Name = @"Bb", Description = @"使用者 乙"},
-				new User {Name = @"Cc", Description = @"使用者 丙"},
-				new User {Name = @"Dd", Description = @"使用者 丁"}
+				new Restaurant {Name = @"Aa", Description = @"使用者 甲"},
+				new Restaurant {Name = @"Bb", Description = @"使用者 乙"},
+				new Restaurant {Name = @"Cc", Description = @"使用者 丙"},
+				new Restaurant {Name = @"Dd", Description = @"使用者 丁"}
 			};
 
 			RunOnUiThread(() =>
@@ -47,7 +47,7 @@ namespace Jim.Droid
 
 				userTable.ItemClick += (sender, args) =>
 				{
-					User user = list[args.Position];
+					Restaurant user = list[args.Position];
 
 					Intent nextActivity = new Intent(this, typeof(DetailActivity));
 					nextActivity.PutExtra("selectedUser", Newtonsoft.Json.JsonConvert.SerializeObject(user));
@@ -61,11 +61,11 @@ namespace Jim.Droid
 		/// <summary>
 		/// 請複製整個類別後，更改資料以及
 		/// </summary>
-		public class UserListAdapter : BaseAdapter<User>
+		public class UserListAdapter : BaseAdapter<Restaurant>
 		{
 			private Activity context;
 
-			private List<User> Users { get; set; }
+			private List<Restaurant> Users { get; set; }
 
 			/// <summary>
 			/// Initializes a new instance of the <see cref="T:XamarinTableView.Droid.MainActivity.UserListAdapter"/> class.
@@ -73,11 +73,11 @@ namespace Jim.Droid
 			/// </summary>
 			/// <param name="users">Users.</param>
 			/// <param name="context">Context.</param>
-			public UserListAdapter(IEnumerable<User> users, Activity context)
+			public UserListAdapter(IEnumerable<Restaurant> users, Activity context)
 			{
 				this.context = context;
 
-				Users = new List<User>();
+				Users = new List<Restaurant>();
 				Users.AddRange(users);
 			}
 
@@ -119,7 +119,7 @@ namespace Jim.Droid
 				}
 
 				// Data Binding
-				User user = Users[position];
+				Restaurant user = Users[position];
 
 				view.FindViewById<TextView>(Resource.Id.menuview_userview_lbName).Text = user.Name;
 				view.FindViewById<TextView>(Resource.Id.menuview_userview_lbDescription).Text = user.Description;
@@ -132,7 +132,7 @@ namespace Jim.Droid
 			/// Gets the <see cref="T:XamarinTableView.Droid.MainActivity.UserListAdapter"/> with the specified position.
 			/// </summary>
 			/// <param name="position">Position.</param>
-			public override User this[int position] => Users[position];
+			public override Restaurant this[int position] => Users[position];
 		}
 	}
 }

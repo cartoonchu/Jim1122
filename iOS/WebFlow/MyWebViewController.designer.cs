@@ -1,4 +1,4 @@
-﻿// WARNING
+// WARNING
 //
 // This file has been generated automatically by Visual Studio to store outlets and
 // actions made in the UI designer. If it is removed, they will be lost.
@@ -31,9 +31,9 @@ namespace Jim.iOS
 				btnGo = null;
 			}
 
-			if (txtUrl != null) {
-				txtUrl.Dispose ();
-				txtUrl = null;
+			if (btnGoButtomConstraint != null) {
+				btnGoButtomConstraint.Dispose ();
+				btnGoButtomConstraint = null;
 			}
 
 			if (myWebView != null) {
@@ -41,9 +41,9 @@ namespace Jim.iOS
 				myWebView = null;
 			}
 
-			if (btnGoButtomConstraint != null) {
-				btnGoButtomConstraint.Dispose ();
-				btnGoButtomConstraint = null;
+			if (txtUrl != null) {
+				txtUrl.Dispose ();
+				txtUrl = null;
 			}
 		}
 	}
