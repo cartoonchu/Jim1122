@@ -30,12 +30,31 @@ namespace Jim.iOS
 			var mapRegion = MKCoordinateRegion.FromDistance(mapCenter, 4000, 4000);
 
 			myMapView.Region = mapRegion;
+			var annotation = new BasicMapAnnotation(mapCenter);
+			myMapView.AddAnnotation(annotation);
 		}
 
 		public override void DidReceiveMemoryWarning()
 		{
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.
+		}
+	}
+	class BasicMapAnnotation : MKAnnotation
+	{
+
+		CLLocationCoordinate2D coord;
+
+
+		public override CLLocationCoordinate2D Coordinate { get { return coord; } }
+		public override void SetCoordinate(CLLocationCoordinate2D value)
+		{
+			coord = value;
+		}
+
+		public BasicMapAnnotation(CLLocationCoordinate2D coordinate)
+		{
+			this.coord = coordinate;
 		}
 	}
 }
